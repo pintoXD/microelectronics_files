@@ -1,0 +1,69 @@
+xrun(64): 22.09-s013: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s013: Started on Nov 14, 2024 at 14:30:30 -03
+xrun
+	-64bit
+	q1_tb.sv
+	q1.sv
+	luts/lut2/LUT2.sv
+Recompiling... reason: file './q1.sv' is newer than expected.
+	expected: Thu Nov 14 14:28:42 2024
+	actual:   Thu Nov 14 14:30:25 2024
+file: q1.sv
+	module worklib.Q1_LUT2:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		LUT2_Q1_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.LUT2:sv <0x51a17c6d>
+			streams:   2, words:   937
+		worklib.LUT2:sv <0x2d39a40d>
+			streams:   2, words:   984
+		worklib.Q1_LUT2:sv <0x02e5b65d>
+			streams:   7, words:  1610
+		worklib.LUT2_Q1_tb:sv <0x6d4bf3a6>
+			streams:   8, words: 19561
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 6       3
+		Registers:              18      12
+		Scalar wires:           17       -
+		Vectored wires:          4       -
+		Always blocks:           4       1
+		Initial blocks:          2       2
+		Cont. assignments:       4       1
+		Pseudo assignments:     12      12
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.LUT2_Q1_tb:sv
+Loading snapshot worklib.LUT2_Q1_tb:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/tools/cadence/installs/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+                Tempo   Entradas LUT        Saídas
+                         A   B   C   D       OUT
+                ====   ================      =======
+                   0     0   0   0   0        0
+                  10     0   0   0   1        0
+                  20     0   0   1   0        0
+                  30     0   0   1   1        1
+                  40     0   1   0   0        0
+                  50     0   1   0   1        0
+                  60     0   1   1   0        0
+                  70     0   1   1   1        1
+                  80     1   0   0   0        0
+                  90     1   0   0   1        0
+                 100     1   0   1   0        0
+                 110     1   0   1   1        1
+                 120     1   1   0   0        0
+                 130     1   1   0   1        0
+                 140     1   1   1   0        0
+                 150     1   1   1   1        0
+Simulation complete via $finish(1) at time 160 PS + 0
+./q1_tb.sv:122     $finish;
+xcelium> exit
+TOOL:	xrun(64)	22.09-s013: Exiting on Nov 14, 2024 at 14:30:42 -03  (total: 00:00:12)
